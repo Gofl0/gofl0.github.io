@@ -27,7 +27,7 @@ gsap.to(ball, {
     onUpdate: render,
 })
 
-gsap.fromTo(".description", { opacity: 0.1,}, {
+gsap.fromTo(".description", { opacity: 0,}, {
     opacity: 1,
     scrollTrigger: {
         scrub: true,
@@ -54,14 +54,14 @@ gsap.fromTo(".description", {x: -2000, }, {
     }
 });
 
-gsap.fromTo(".description2", { opacity: 0.1, }, {
+gsap.fromTo(".description2", { opacity: 0, }, {
     opacity: 1, scrollTrigger: {
         scrub: true,
         start: '60%',
         end: '80%',
     },
     onComplete: () => {
-        gsap.to(".description2", { opacity: 0.1, });
+        gsap.to(".description2", { opacity: 0, });
     }
 });
 gsap.fromTo(".description2", { x: -2000, }, {
